@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
-  def index
-       @posts = [
-      {
+    def post0
+      @post = {
         title: "Superstar",
         author: "Carly Rae Jepson",
         text: <<-eos.gsub(/\s+/, " ").strip
@@ -10,8 +9,11 @@ class PostsController < ApplicationController
           is unparalleled. And those costumes! He remains an inspiration to this
           day.
         eos
-      },
-      {
+      }
+    end
+
+    def post1
+      @post = {
         title: "Basketball Idol",
         author: "Steve Nash",
         text: <<-eos.gsub(/\s+/, " ").strip
@@ -19,8 +21,11 @@ class PostsController < ApplicationController
           pickup games on the street. Dude had moves nobody had ever seen. Breaking
           ankles. Poppin' threes. Great all-around game.
         eos
-      },
-      {
+      }
+    end
+
+    def post2
+      @post = {
         title: "Acting Legend",
         author: "Michael J. Fox",
         text: <<-eos.gsub(/\s+/, " ").strip
@@ -28,12 +33,13 @@ class PostsController < ApplicationController
           studied with the best and it shows. His acting chops were already legendary
           before his teaching career began. But it seems he's actually improved!
         eos
-      },
-      {
+      }
+    end
+    def post3
+      @post = {
         title: "Who?",
         author: "Minnie Bannister",
         text: "Never heard of this guy Albert Scratenue, but he sounds like a sad git."
       }
-    ]
-  end
+    end
 end
